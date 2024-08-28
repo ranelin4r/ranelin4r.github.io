@@ -1,0 +1,131 @@
+﻿<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>RaneLiner's</title>
+        <style>
+            @font-face {
+                font-family: "emoji";
+                src: url("fonts/seguiemj.ttf") format("truetype");
+            }
+            body{
+                margin: 0px;
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                height: 100%;
+                width: 100%;
+                background-color: #333;
+                overflow: hidden;
+                transition: all 5s;
+            }
+            .text {
+                position: absolute;
+                z-index: 1;
+                top: -40px;
+                color: #fff;
+                font-size: 24px;
+                font-family: emoji;
+                animation: animate 2s linear;
+                pointer-events: none;
+            }
+            @keyframes animate {
+                50% {
+                    transform: translateY(calc(100vh + 60px));
+                }
+                100% {
+                    transform: translateY(calc(100vh + 60px));
+                }
+            }
+            .center{
+                display: flex;
+                flex-direction: column;
+                flex-grow: 1;
+                align-items: center;
+                justify-content: center;
+                pointer-events: none;
+            }
+            img{
+                width: calc(100vh - 30%);
+            }
+            h1,p{
+                margin: 4px;
+                color: whitesmoke;
+                font-family: sans-serif;
+            }
+            p{
+                font-weight: 100;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="textRain"></div>
+        <div class="center">
+            <img src="tea.svg" alt="真的是茶，不骗你（）">
+            <h1>ranelin4r.github.io</h1>
+            <p>欢迎光临RaneLiner的主页（未完成）</p>
+            <p>不妨喝杯茶，放一下手里的项目吧 > (真诚)</p>
+        </div>
+        <script>
+            function textRainEffect() {
+                setInterval(() => {
+                    startTextRain();
+                },100)
+            }
+
+            var rain = [
+                '😂',
+                '💎',
+                '👍',
+                '🍮',
+                '🌈',
+                '❤',
+                '🥝',
+                '🎓',
+                '🔔',
+                '✨',
+                '💧',
+                '☕',
+                '📝',
+                '❄',
+            ];
+
+            function startTextRain() {
+                var rainEle = document.querySelector(".textRain");
+                var textEle = document.createElement("div");
+
+                textEle.innerText = rain[Math.floor(Math.random() * rain.length)];
+                textEle.classList.add("text");
+
+                var styleSheets = {
+                    left: `${Math.floor(Math.random() * window.innerWidth - 40)}px`,
+                    fontSize: `${0.5 + Math.random() * 1.5}em`,
+                    animationDuration: `${5 + Math.random()}s`,
+                };
+
+                Object.assign(textEle.style, styleSheets);
+
+                rainEle.appendChild(textEle);
+
+                setTimeout(() => {
+                    rainEle.removeChild(textEle);
+                }, 5000);
+            };
+
+            function randomColor() {
+                return '#' + Math.floor(Math.random()*16777215).toString(16);
+            };
+
+            function background(){
+                setInterval(()=>{
+                    document.body.style.backgroundColor = randomColor();
+                },4000);
+            };
+
+            window.onload = () => {
+                textRainEffect();
+                background();
+            };
+        </script>
+    </body>
+</html>
