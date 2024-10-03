@@ -127,9 +127,8 @@ body{
     .titleBar .link #nav{
         display: block;
     }
-
     .titleBar img{
-        width: 150px;
+        width: 180px;
     }
 }
 
