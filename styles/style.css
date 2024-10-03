@@ -127,6 +127,10 @@ body{
     .titleBar .link #nav{
         display: block;
     }
+
+    .titleBar img{
+        width: 200px;
+    }
 }
 
 [id=dark]{
