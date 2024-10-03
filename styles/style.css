@@ -1,0 +1,223 @@
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: #fff9de;
+    transition: background 1s;
+}
+
+.titleBar{
+    background-color: #80808080;
+    backdrop-filter: blur(5px);
+    height: 48px;
+    display: flex;
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+    justify-content: space-between;
+    box-shadow: black 0px 2px 10px;
+    transition: background 1s;
+}
+
+.titleBar .link{
+    display: flex;
+    place-items: center;
+    user-select: none;
+}
+
+.titleBar .link a,
+.titleBar .link div{
+    padding: 0px 18px;
+    color: #fff;
+    font-family: 'slboot';
+    text-decoration: none;
+    transition: all 300ms;
+}
+
+.titleBar .link span{
+    font-family: 'MDL2';
+    vertical-align: -2px;
+}
+
+.titleBar .link #nav{
+    display: none;
+}
+
+.titleBar a:hover,
+.titleBar #nav:hover{
+    color: #000;
+    text-shadow: 4px 4px 4px #fff;
+    cursor: pointer;
+}
+
+.titleBar img{
+    width: 240px;
+    transform: rotate(-5deg);
+    transition: all 500ms;
+}
+
+.titleBar img:hover{
+    transform: rotate(10deg);
+}
+
+.titleBar img:active{
+    transform: rotate(360deg);
+}
+
+.titleBar button{
+    padding: 10px;
+    margin: 4px;
+    background-color: transparent;
+    border: none;
+    border-radius: 50%;
+    place-items: center;
+    display: grid;
+    transition: all 100ms;
+}
+
+.titleBar button span{
+    font-family: 'MDL2';
+    font-size: 20px;
+    color: #fff;
+}
+
+.titleBar button:hover{
+    background-color: rgba(255,255,255,0.2);
+}
+
+.titleBar button:active{
+    background-color: rgba(255,255,255,0.4);
+}
+
+.titleBar button::after{
+    content: "";
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+    pointer-events: none;
+    background-image: radial-gradient(circle, #fff 10%, transparent 10%);
+    transform: scale(-50);
+    opacity: 0;
+    transition: transform 2s, opacity 1s;
+}
+
+.titleBar button:active::after{
+    transform: scale(0);
+    opacity: 0.8;
+    transition: 0s;
+}
+
+.titleBar svg{
+    fill: #fff;
+    width: 20px;
+}
+
+@media (max-width: 800px){
+    .titleBar .link a{
+        display: none;
+    }
+    .titleBar .link #nav{
+        display: block;
+    }
+}
+
+[id=dark]{
+    display: none;
+}
+
+#loading{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+    width: 100vw;
+    height: 100vh;
+    background-color: #808080;
+    position: fixed;
+    z-index: 114;
+    opacity: 1;
+    transition:opacity 1s ease-out
+}
+
+#loading img{
+    width: 200px;
+}
+
+.article{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    color: #333;
+    top: 48px;
+}
+
+.background{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 200px;
+}
+
+.background img{
+    width: 100%;
+    height: 200px;
+    filter: blur(5px);
+    position: absolute;
+    z-index: -1;
+}
+
+.info{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    align-items: center;
+    color: #333;
+    place-content: center;
+    pointer-events: none;
+    user-select: none;
+}
+
+.info h1{
+    margin: 8px;
+}
+
+.info span{
+    font-family: 'MDL2','slboot';
+    margin: 10px;
+    vertical-align: 3px;
+}
+
+.text{
+    position: relative;
+    margin: 20px auto 80px auto;
+    padding: 20px;
+    font-family: 'deng','emoji';
+}
+
+.text *{
+    transition: color 1s;
+}
+
+#footer{
+    position: relative;
+    border-top: #333 1px solid;
+}
+
+#footer span{
+    padding: 4px 0px;
+    font-family: 'slboot','MDL2';
+    display: flex;
+    justify-content: center;
+    vertical-align: 3px;
+}

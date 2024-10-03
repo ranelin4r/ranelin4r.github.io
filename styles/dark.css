@@ -1,0 +1,16 @@
+.dark{
+    background-color: #242424;
+}
+
+.dark .titleBar{
+    background-color: #33333380;
+}
+
+.dark .titleBar a:hover,
+.dark .titleBar #nav:hover{
+    color: #000;
+}
+
+.dark .article .text *{
+    color: #fff;
+}
