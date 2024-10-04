@@ -143,14 +143,18 @@ h1{
     display: none;
 }
 
-#loading{
-    color: white;
+.center{
     display: flex;
     flex-direction: column;
     flex-grow: 1;
+    position: relative;
     align-items: center;
     justify-content: center;
     pointer-events: none;
+}
+
+#loading{
+    color: white;
     width: 100vw;
     height: 100vh;
     background-color: #808080;

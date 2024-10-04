@@ -29,20 +29,6 @@ body{
     }
 }
 
-.center{
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
-    position: relative;
-    align-items: center;
-    justify-content: center;
-    pointer-events: none;
-}
-
-img{
-    width: 200px;
-}
-
 h1,h3{
     margin: 4px;
     font-family: sans-serif;
@@ -54,7 +40,12 @@ h1{
     animation-iteration-count: infinite;
 }
 
+h3{
+    font-family: 'slboot';
+}
+
 .center img{
+    width: 200px;
     animation: gr 5s ease-in-out;
     animation-iteration-count: infinite;
 }
@@ -83,6 +74,3 @@ h1{
     }
 }
 
-h3{
-    font-family: 'slboot';
-}
