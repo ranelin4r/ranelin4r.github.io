@@ -18,3 +18,7 @@
 .dark #footer{
     color: #fff;
 }
+
+.dark div[class=center] *{
+    color: #fff;
+}

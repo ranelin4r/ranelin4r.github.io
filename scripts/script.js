@@ -2,7 +2,7 @@ window.onload = () => {
     document.getElementById('loading').style.opacity = '0';
     setTimeout(()=>{
         document.body.removeChild(loading);
-    },2000);
+    },1000);
 }
 
 var switcher = document.getElementById('switcher');

@@ -1,7 +1,3 @@
-html{
-    scroll-behavior: smooth;
-}
-
 body{
     margin: 0px;
     display: flex;
@@ -55,10 +51,6 @@ body{
     color: #000;
     text-shadow: 4px 4px 4px #fff;
     cursor: pointer;
-}
-
-h1{
-    transition: all 500ms;
 }
 
 .titleBar img{
@@ -124,21 +116,6 @@ h1{
     width: 20px;
 }
 
-@media (max-width: 800px){
-    .titleBar .link a{
-        display: none;
-    }
-    .titleBar .link #nav{
-        display: block;
-    }
-    .titleBar img{
-        width: 180px;
-    }
-    h1{
-        font-size: 20px;
-    }
-}
-
 [id=dark]{
     display: none;
 }
@@ -168,12 +145,54 @@ h1{
     width: 200px;
 }
 
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 48px;
+    justify-content: space-around;
+    padding: 10px;
+}
+
+.card {
+    border: 1px solid #ced4da;
+    width: calc(50% - 20px);
+    height: 200px;
+    text-decoration: none;
+    color: #000;
+    box-sizing: border-box;
+    margin: 10px;
+    transition: box-shadow 200ms;
+}
+
+.card .card-info{
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(5px);
+}
+
+.card .card-info h2{
+    margin: 0px;
+    padding: 20px;
+}
+
+.card p{
+    padding-left: 24px;
+    font-family: 'MDL2','slboot';
+}
+
+.card span{
+    vertical-align: 3px;
+}
+
+.card:hover{
+    box-shadow: #000 4px 4px 10px;
+}
+
 .article{
     display: flex;
     flex-direction: column;
-    position: relative;
+    margin-top: 48px;
     color: #333;
-    top: 48px;
 }
 
 .background{
@@ -219,13 +238,9 @@ h1{
     font-family: 'deng','emoji';
 }
 
-.text *{
-    transition: color 1s;
-}
-
 #footer{
     position: relative;
-    border-top: #333 1px solid;
+    border-top: #808080 1px solid;
 }
 
 #footer span{
@@ -234,4 +249,26 @@ h1{
     display: flex;
     justify-content: center;
     vertical-align: 3px;
+}
+
+h1,h2,h3,p,i,u,li,#footer span{
+    transition: all 500ms;
+}
+
+@media (max-width: 800px){
+    .titleBar .link a{
+        display: none;
+    }
+    .titleBar .link #nav{
+        display: block;
+    }
+    .titleBar img{
+        width: 180px;
+    }
+    h1{
+        font-size: 24px;
+    }
+    .card {
+        width: 100%;
+    }
 }

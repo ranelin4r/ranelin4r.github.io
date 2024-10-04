@@ -32,6 +32,9 @@ body{
 h1,h3{
     margin: 4px;
     font-family: sans-serif;
+}
+
+h1,h3,#footer span{
     mix-blend-mode: overlay;
 }
 
