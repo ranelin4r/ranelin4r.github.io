@@ -50,7 +50,6 @@ h1,h3{
 }
 
 h1{
-    font-size: 32px;
     animation: rg 5s ease-in-out;
     animation-iteration-count: infinite;
 }

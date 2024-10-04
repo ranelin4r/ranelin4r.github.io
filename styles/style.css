@@ -57,6 +57,10 @@ body{
     cursor: pointer;
 }
 
+h1{
+    transition: all 500ms;
+}
+
 .titleBar img{
     width: 240px;
     transform: rotate(-5deg);
@@ -129,6 +133,9 @@ body{
     }
     .titleBar img{
         width: 180px;
+    }
+    h1{
+        font-size: 20px;
     }
 }
 
