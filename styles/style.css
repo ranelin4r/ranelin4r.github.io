@@ -31,7 +31,7 @@ body{
 .titleBar .link a,
 .titleBar .link div{
     padding: 0px 18px;
-    color: #fff;
+    color: #000;
     font-family: 'slboot';
     text-decoration: none;
     transition: all 300ms;
@@ -48,8 +48,8 @@ body{
 
 .titleBar a:hover,
 .titleBar #nav:hover{
-    color: #000;
-    text-shadow: 4px 4px 4px #fff;
+    color: #fff;
+    text-shadow: 4px 4px 4px #000;
     cursor: pointer;
 }
 

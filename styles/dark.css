@@ -6,9 +6,15 @@
     background-color: #33333380;
 }
 
+.dark .titleBar .link a,
+.dark .titleBar .link div{
+    color: #fff;
+}
+
 .dark .titleBar a:hover,
 .dark .titleBar #nav:hover{
     color: #000;
+    text-shadow: 4px 4px 4px #fff;
 }
 
 .dark .article .text *{
