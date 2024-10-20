@@ -47,7 +47,7 @@ h3{
     font-family: 'slboot';
 }
 
-.center img{
+.center img[id=wow]{
     width: 200px;
     animation: gr 5s ease-in-out;
     animation-iteration-count: infinite;

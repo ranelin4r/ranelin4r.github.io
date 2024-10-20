@@ -1,3 +1,5 @@
+/*----- main -----*/
+
 body{
     margin: 0px;
     display: flex;
@@ -8,6 +10,24 @@ body{
     background-color: #fff9de;
     transition: background 1s;
 }
+
+.center{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+}
+
+h1,h2,h3,p,#footer span{
+    transition: all 500ms !important; 
+}
+
+
+
+/*----- title bar -----*/
 
 .titleBar{
     background-color: #80808080;
@@ -120,15 +140,9 @@ body{
     display: none;
 }
 
-.center{
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
-    position: relative;
-    align-items: center;
-    justify-content: center;
-    pointer-events: none;
-}
+
+
+/*----- load screen -----*/
 
 #loading{
     color: white;
@@ -144,6 +158,10 @@ body{
 #loading img{
     width: 200px;
 }
+
+
+
+/*----- page card -----*/
 
 .card-container {
     display: flex;
@@ -188,11 +206,16 @@ body{
     box-shadow: #000 4px 4px 10px;
 }
 
+
+
+/*----- page title and text -----*/
+
 .article{
     display: flex;
     flex-direction: column;
     margin-top: 48px;
     color: #333;
+    align-items: center;
 }
 
 .background{
@@ -238,6 +261,10 @@ body{
     font-family: 'deng','emoji';
 }
 
+
+
+/*----- footer -----*/
+
 #footer{
     position: relative;
     border-top: #808080 1px solid;
@@ -251,9 +278,10 @@ body{
     vertical-align: 3px;
 }
 
-h1,h2,h3,p,i,u,li,#footer span{
-    transition: all 500ms;
-}
+
+
+
+/*----- phone screen fix -----*/
 
 @media (max-width: 800px){
     .titleBar .link a{
@@ -271,4 +299,40 @@ h1,h2,h3,p,i,u,li,#footer span{
     .card {
         width: 100%;
     }
+}
+
+
+
+/*----- dark mode -----*/
+
+.dark{
+    background-color: #242424;
+}
+
+.dark .titleBar{
+    background-color: #33333380;
+}
+
+.dark .titleBar .link a,
+.dark .titleBar .link div{
+    color: #fff;
+}
+
+.dark .titleBar a:hover,
+.dark .titleBar #nav:hover{
+    color: #000;
+    text-shadow: 4px 4px 4px #fff;
+}
+
+.dark .article p,
+.dark .article .text *{
+    color: #fff;
+}
+
+.dark #footer{
+    color: #fff;
+}
+
+.dark div[class=center] *{
+    color: #fff;
 }
