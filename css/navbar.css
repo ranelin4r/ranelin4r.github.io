@@ -1,0 +1,93 @@
+#navbar {
+    background-color: #d7d2b4;
+    height: 48px;
+    position: fixed;
+    display: flex;
+    width: 100%;
+    z-index: 2;
+    justify-content: space-between;
+    box-shadow: 0 2px 10px black;
+}
+
+#navbar .link {
+    display: flex;
+    align-items: center;
+    user-select: none;
+}
+
+#navbar .link a,
+#navbar .link div {
+    margin-left: 30px;
+    color: #000;
+    font-family: 'slboot', sans-serif;
+    text-decoration: none;
+    transition: color 300ms, text-shadow 300ms;
+}
+
+#navbar .link span {
+    font-family: 'MDL2';
+    vertical-align: -2px;
+}
+
+#navbar .link #nav {
+    display: none;
+}
+
+#navbar a:hover,
+#navbar #nav:hover {
+    color: #fff;
+    text-shadow: 4px 4px 4px #000;
+    cursor: pointer;
+}
+
+#navbar img {
+    width: 160px;
+    transform: rotate(-5deg);
+    transition: all 500ms;
+}
+
+#navbar img:hover {
+    transform: rotate(10deg);
+}
+
+#navbar img:active {
+    transition: transform 500ms ease-in-out;
+    transform: rotate(360deg);
+}
+
+#navbar button {
+    padding: 10px;
+    margin: 4px;
+    background-color: transparent;
+    border: none;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    transition: background-color 200ms;
+}
+
+#navbar button span {
+    font-family: 'MDL2';
+    font-size: 20px;
+    color: #000;
+}
+
+#navbar button:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+#navbar button:active {
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+@media (max-width: 800px) {
+    #navbar .link a {
+        display: none;
+    }
+    #navbar .link #nav {
+        display: block;
+    }
+    #navbar img {
+        width: 140px;
+    }
+}

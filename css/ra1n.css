@@ -1,0 +1,94 @@
+body{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    transition: all 5s;
+}
+
+#main {
+    display: flex;
+    flex-grow: 1;
+}
+
+#navbar{
+    background-color: transparent;
+}
+
+.text {
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    top: -100px;
+    color: #fff;
+    font-size: 24px;
+    font-family: emoji;
+    animation: animate 2s linear;
+    pointer-events: none;
+}
+
+@keyframes animate {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    50% {
+        transform: translateY(50vh);
+        opacity: 0.5;
+    }
+    100% {
+        transform: translateY(100vh);
+        opacity: 0;
+    }
+}
+
+h1,h3{
+    margin: 4px;
+    font-family: sans-serif;
+}
+
+h1,h3,#footer span{
+    mix-blend-mode: overlay;
+}
+
+h1{
+    animation: rg 5s ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+h3{
+    font-family: 'slboot';
+}
+
+.center img[id=wow]{
+    width: 200px;
+    /*animation: gr 5s ease-in-out;*/
+    animation-iteration-count: infinite;
+}
+
+@keyframes rg {
+    0% {
+        transform: rotate(5deg);
+    }
+    50% {
+        transform: rotate(-5deg);
+    }
+    100% {
+        transform: rotate(5deg);
+    }
+}
+
+@keyframes gr {
+    0% {
+        transform: rotate(-5deg);
+    }
+    50% {
+        transform: rotate(5deg);
+    }
+    100% {
+        transform: rotate(-5deg);
+    }
+}
+
