@@ -1,17 +1,21 @@
-window.onload = () => {
-    document.getElementById('loading').style.opacity = '0';
-    setTimeout(()=>{
-        document.body.removeChild(loading);
+window.addEventListener('load', function() {
+    document.getElementById('load').style.opacity = '0';
+    this.setTimeout(() => {
+        document.body.removeChild(load);
     },1000);
-}
+    document.getElementById('main').style.transform = 'translateY(0)';
+    document.querySelectorAll('pre code').forEach((block) => {
+        hljs.highlightElement(block);
+    });
+});
 
-var switcher = document.getElementById('switcher');
-var body = document.querySelector('body');
-
-switcher.onclick = () => {
-    if(body.classList.contains('dark')) {
-        switcher.title = '切换暗色';
+document.getElementById('nav').addEventListener('click', function showNav() {
+    const mobileNavbar = document.getElementById('mobile-navbar');
+    if (open) {
+        mobileNavbar.classList.remove('hidden');
+        mobileNavbar.classList.add('visible');
     } else {
-        switcher.title = '切换亮色';
+        mobileNavbar.classList.remove('visible');
+        mobileNavbar.classList.add('hidden');
     }
-}
+});
