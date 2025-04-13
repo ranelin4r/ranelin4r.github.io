@@ -290,6 +290,30 @@ body {
     line-height: 1.5em;
 }
 
+@media (max-width: 800px) {
+    .post-meta {
+        height: auto;
+        padding: 10px;
+    }
+
+    .post-meta h1 {
+        font-size: 24px;
+    }
+
+    .background img {
+        height: 150px;
+    }
+
+    .post-content {
+        width: 85%;
+        padding: 10px;
+    }
+
+    .post-info a {
+        font-size: 14px;
+    }
+}
+
 /* Footer */
 footer {
     position: relative;
