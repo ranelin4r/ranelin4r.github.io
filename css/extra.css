@@ -2,17 +2,34 @@
 
 @font-face {
     font-family: "MDL2";
+<<<<<<< HEAD
     src: url("/fonts/mdl2.woff2")format("woff2");
+=======
+    src: url("/fonts/segmdl2.ttf")format("truetype");
+}
+
+@font-face {
+    font-family: "emoji";
+    src: url("/fonts/seguiemj.ttf")format("truetype");
+>>>>>>> a2a31d6a85e027d2e40c49d7969e584abc501dc1
 }
 
 @font-face {
     font-family: "slboot";
+<<<<<<< HEAD
     src: url("/fonts/slboot.woff2")format("woff2");
+=======
+    src: url("/fonts/slboot.ttf")format("truetype");
+>>>>>>> a2a31d6a85e027d2e40c49d7969e584abc501dc1
 }
 
 @font-face {
     font-family: "dengl";
+<<<<<<< HEAD
     src: url("/fonts/dengl.woff2")format("woff2");
+=======
+    src: url("/fonts/Dengl.ttf")format("truetype");
+>>>>>>> a2a31d6a85e027d2e40c49d7969e584abc501dc1
 }
 
 
@@ -41,7 +58,11 @@
 /* lenis */
 
 html.lenis, html.lenis body {
+<<<<<<< HEAD
     height: 100%;
+=======
+    height: auto;
+>>>>>>> a2a31d6a85e027d2e40c49d7969e584abc501dc1
 }
    
 .lenis.lenis-smooth {
