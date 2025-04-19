@@ -3,19 +3,26 @@ window.addEventListener('load', function() {
     this.setTimeout(() => {
         document.body.removeChild(load);
     },1000);
-    document.getElementById('main').style.transform = 'translateY(0)';
-    document.querySelectorAll('pre code').forEach((block) => {
-        hljs.highlightElement(block);
-    });
+
+    lenisInit();
 });
 
-document.getElementById('nav').addEventListener('click', function showNav() {
+function lenisInit() {
+    const lenis = new Lenis();
+    //lenis.on('scroll', console.log);
+    requestAnimationFrame(function raf(time) {
+        lenis.raf(time);
+        requestAnimationFrame(raf);
+    });
+}
+
+function showNav() {
     const mobileNavbar = document.getElementById('mobile-navbar');
-    if (open) {
+    if (mobileNavbar.classList.contains('hidden')) {
         mobileNavbar.classList.remove('hidden');
         mobileNavbar.classList.add('visible');
     } else {
         mobileNavbar.classList.remove('visible');
         mobileNavbar.classList.add('hidden');
     }
-});
+};

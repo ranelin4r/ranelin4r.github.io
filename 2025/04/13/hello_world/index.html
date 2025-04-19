@@ -12,50 +12,50 @@
     </head>
     <body>
         <div id="load" class="center">
-            <img src="/imgs/wait.jpg" alt="">
+            <img src="/imgs/wait.jpg" alt="wait">
             <img src="/imgs/throbber.svg" alt="">
             <span>喝口茶，静静等待一下...</span>
         </div>
         <header>
             <nav id="navbar">
     <div class="link">
-        <img src="/imgs/nav.jpg">        
+        <img src="/imgs/nav.jpg">
         
-            
-            <div id="nav">
+            <a href="menu:();"
+                name="menu"
+                onclick=showNav();>
                 <span>&#xe700;</span>&ensp;MENU
-            </div>
-            
+            </a>
         
-            
-            <a href="/">
+            <a href="/"
+                name=""
+                onclick=>
                 <span>&#xe10f;</span>&ensp;HOME
             </a>
-            
         
-            
-            <a href="/archives">
+            <a href="/archives"
+                name=""
+                onclick=>
                 <span>&#xe7b8;</span>&ensp;ARCHIVES
             </a>
-            
         
-            
-            <a href="/tags">
+            <a href="/tags"
+                name=""
+                onclick=>
                 <span>&#xe8ec;</span>&ensp;TAGS
             </a>
-            
         
-            
-            <a href="/projects">
+            <a href="/projects"
+                name=""
+                onclick=>
                 <span>&#xeca5;</span>&ensp;PROJECTS
             </a>
-            
         
-            
-            <a href="/about">
+            <a href="/about"
+                name=""
+                onclick=>
                 <span>&#xe13d;</span>&ensp;ABOUT
             </a>
-            
         
     </div>
     <button id="switcher" title="切换暗色">
@@ -64,83 +64,51 @@
     </button>
 </nav>
 
-<!-- 手机端伸缩导航 -->
-<div id="mobile-navbar" class="hidden">
-    <div class="links">
+<nav id="mobile-navbar" class="hidden">
+    <div class="link">
         
-            
-            <div id="nav">
+            <a href="menu:();"
+                name="menu"
+                onclick=showNav();>
                 <span>&#xe700;</span>&ensp;MENU
-            </div>
-            
+            </a>
         
-            
-            <a href="/">
+            <a href="/"
+                name=""
+                onclick=>
                 <span>&#xe10f;</span>&ensp;HOME
             </a>
-            
         
-            
-            <a href="/archives">
+            <a href="/archives"
+                name=""
+                onclick=>
                 <span>&#xe7b8;</span>&ensp;ARCHIVES
             </a>
-            
         
-            
-            <a href="/tags">
+            <a href="/tags"
+                name=""
+                onclick=>
                 <span>&#xe8ec;</span>&ensp;TAGS
             </a>
-            
         
-            
-            <a href="/projects">
+            <a href="/projects"
+                name=""
+                onclick=>
                 <span>&#xeca5;</span>&ensp;PROJECTS
             </a>
-            
         
-            
-            <a href="/about">
+            <a href="/about"
+                name=""
+                onclick=>
                 <span>&#xe13d;</span>&ensp;ABOUT
             </a>
-            
         
     </div>
-</div>
-
-<style>
-    #mobile-navbar {
-        position: fixed;
-        top: 0;
-        left: -100%;
-        width: 200px;
-        height: 100%;
-        background-color: #fff;
-        box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
-        transition: left 0.5s;
-        z-index: 1000;
-    }
-    #mobile-navbar.hidden {
-        left: -100%;
-    }
-    #mobile-navbar.visible {
-        left: 0;
-    }
-    #open-mobile-navbar {
-        display: none;
-    }
-    @media (max-width: 800px) {
-        #open-mobile-navbar {
-            display: block;
-        }
-    }
-</style>
-
-
+</nav>
 
         </header>
-        <div id="main">
-            <main class="">
-                <article class="post">
+        <main id="main">
+            <article class="post">
     <div class="post-meta">
         <h1 class="title">Hello World</h1>
         <p class="post-info">
@@ -165,28 +133,35 @@
     </div>
     <div class="post-content">
         <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo new <span class="hljs-string">&quot;My New Post&quot;</span><br></code></pre></td></tr></table></figure>
 
 <p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo server<br></code></pre></td></tr></table></figure>
 
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;Hello, Hexo with highlight.js!&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="title class_">More</span> <span class="attr">info</span>: [<span class="title class_">Server</span>](<span class="attr">https</span>:<span class="comment">//hexo.io/docs/server.html)</span></span><br><span class="line"></span><br><span class="line">### <span class="title class_">Generate</span> <span class="keyword">static</span> files</span><br><span class="line"></span><br><span class="line"><span class="string">``</span><span class="string">` bash</span></span><br><span class="line"><span class="string">$ hexo generate</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">&#x27;Hello, Hexo with highlight.js!&#x27;</span>);<br><br><span class="hljs-title class_">More</span> <span class="hljs-attr">info</span>: [<span class="hljs-title class_">Server</span>](<span class="hljs-attr">https</span>:<span class="hljs-comment">//hexo.io/docs/server.html)</span><br><br>### <span class="hljs-title class_">Generate</span> <span class="hljs-keyword">static</span> files<br><br><span class="hljs-string">``</span><span class="hljs-string">` bash</span><br><span class="hljs-string">$ hexo generate</span><br></code></pre></td></tr></table></figure>
 
 <p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo deploy<br></code></pre></td></tr></table></figure>
 
 <p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
 
     </div>
 </article>
-<script src="/js/highlight.min.js"></script>
 
-            </main>
-            <footer>
-                <span>&copy;2023 - 2025 | Created by @Raneliner</span>
-                <span>Powered by<a target="_blank" rel="noopener" href="https://hexo.io">Hexo.</a> (Testing)</span>
-            </footer>
-        </div>
+
+        </main>
+        <footer>
+            <span>&copy;2023 - 2025 | Created by @Raneliner</span>
+            <span>Powered by<a target="_blank" rel="noopener" href="https://hexo.io">Hexo.</a> (Testing)</span>
+        </footer>
     </body>
-    <script src="/js/script.js"></script>
+    <script src="/js/lenis.min.js"></script>
+<script src="/js/script.js"></script>
+
+
+    <script src="/js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <link rel="stylesheet" href="/css/highlight/tomorrow-night-blue.css">
+
+
 </html>

@@ -12,50 +12,50 @@
     </head>
     <body>
         <div id="load" class="center">
-            <img src="/imgs/wait.jpg" alt="">
+            <img src="/imgs/wait.jpg" alt="wait">
             <img src="/imgs/throbber.svg" alt="">
             <span>喝口茶，静静等待一下...</span>
         </div>
         <header>
             <nav id="navbar">
     <div class="link">
-        <img src="/imgs/nav.jpg">        
+        <img src="/imgs/nav.jpg">
         
-            
-            <div id="nav">
+            <a href="menu:();"
+                name="menu"
+                onclick=showNav();>
                 <span>&#xe700;</span>&ensp;MENU
-            </div>
-            
+            </a>
         
-            
-            <a href="/">
+            <a href="/"
+                name=""
+                onclick=>
                 <span>&#xe10f;</span>&ensp;HOME
             </a>
-            
         
-            
-            <a href="/archives">
+            <a href="/archives"
+                name=""
+                onclick=>
                 <span>&#xe7b8;</span>&ensp;ARCHIVES
             </a>
-            
         
-            
-            <a href="/tags">
+            <a href="/tags"
+                name=""
+                onclick=>
                 <span>&#xe8ec;</span>&ensp;TAGS
             </a>
-            
         
-            
-            <a href="/projects">
+            <a href="/projects"
+                name=""
+                onclick=>
                 <span>&#xeca5;</span>&ensp;PROJECTS
             </a>
-            
         
-            
-            <a href="/about">
+            <a href="/about"
+                name=""
+                onclick=>
                 <span>&#xe13d;</span>&ensp;ABOUT
             </a>
-            
         
     </div>
     <button id="switcher" title="切换暗色">
@@ -64,135 +64,142 @@
     </button>
 </nav>
 
-<!-- 手机端伸缩导航 -->
-<div id="mobile-navbar" class="hidden">
-    <div class="links">
+<nav id="mobile-navbar" class="hidden">
+    <div class="link">
         
-            
-            <div id="nav">
+            <a href="menu:();"
+                name="menu"
+                onclick=showNav();>
                 <span>&#xe700;</span>&ensp;MENU
-            </div>
-            
+            </a>
         
-            
-            <a href="/">
+            <a href="/"
+                name=""
+                onclick=>
                 <span>&#xe10f;</span>&ensp;HOME
             </a>
-            
         
-            
-            <a href="/archives">
+            <a href="/archives"
+                name=""
+                onclick=>
                 <span>&#xe7b8;</span>&ensp;ARCHIVES
             </a>
-            
         
-            
-            <a href="/tags">
+            <a href="/tags"
+                name=""
+                onclick=>
                 <span>&#xe8ec;</span>&ensp;TAGS
             </a>
-            
         
-            
-            <a href="/projects">
+            <a href="/projects"
+                name=""
+                onclick=>
                 <span>&#xeca5;</span>&ensp;PROJECTS
             </a>
-            
         
-            
-            <a href="/about">
+            <a href="/about"
+                name=""
+                onclick=>
                 <span>&#xe13d;</span>&ensp;ABOUT
             </a>
-            
         
     </div>
-</div>
-
-<style>
-    #mobile-navbar {
-        position: fixed;
-        top: 0;
-        left: -100%;
-        width: 200px;
-        height: 100%;
-        background-color: #fff;
-        box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
-        transition: left 0.5s;
-        z-index: 1000;
-    }
-    #mobile-navbar.hidden {
-        left: -100%;
-    }
-    #mobile-navbar.visible {
-        left: 0;
-    }
-    #open-mobile-navbar {
-        display: none;
-    }
-    @media (max-width: 800px) {
-        #open-mobile-navbar {
-            display: block;
-        }
-    }
-</style>
-
-
+</nav>
 
         </header>
-        <div id="main">
-            <main class="">
-                <section class="card-container">
+        <main id="main">
+            <div class="search-bar">
+    <input type="text" id="searchInput" placeholder="&#xe1a3;&ensp;Take a search">
+</div>
+
+<script>
+    document.getElementById('searchInput').onkeyup = () => {
+        const input = document.getElementById('searchInput');
+        const filter = input.value.toLowerCase();
+        const cards = document.querySelectorAll('.card');
+
+        cards.forEach(card => {
+            const title = card.querySelector('h3').textContent.toLowerCase();
+            if (title.includes(filter)) {
+                card.style.display = '';
+            } else {
+                card.style.display = 'none';
+            }
+        });
+    }
+</script>
+<section class="card-container">
     
-        <a class="card" href="/2025/04/13/hello_world/">
-            <div class="card-info">
-                <h2>Hello World</h2>
-                <p>
-                    &#xec92;
-                    <span>&ensp;2025 / 04 / 13</span>
-                </p>
-                
-                    <p>『 hexo test 』</p>
-                
-            </div>
-        </a>
-    
-        <a class="card" href="/2025/04/13/colgem/">
-            <div class="card-info">
-                <h2>舌尖上的模板：萬惡之源寶石</h2>
-                <p>
-                    &#xec92;
-                    <span>&ensp;2025 / 04 / 13</span>
-                </p>
-                
-                    <p>『 Made by Maxie★生草亡靈~♫沙雕上人♫ 』</p>
-                
-            </div>
-        </a>
-    
-        <a class="card" href="/2024/06/26/lenis_test/">
-            <div class="card-info">
-                <h2>《实梦笔记》</h2>
-                <p>
-                    &#xec92;
-                    <span>&ensp;2024 / 06 / 26</span>
-                </p>
-                
-                    <p>『 一只因抑郁而迫切想自杀的老鼠 』</p>
-                
-            </div>
-        </a>
+        
+            <a class="card" href="/2025/04/13/hello_world/">
+                <div class="card-info">
+                    <h3>Hello World</h3>
+                    <p>
+                        &#xec92;
+                        <span>&ensp;2025 / 04 / 13</span>
+                        
+                            
+                                &ensp;&ensp;&#xe8ec;
+                                <span>&ensp;hello</span> 
+                            
+                        
+                    </p>
+                    
+                        <p>『 hexo test 』</p>
+                    
+                </div>
+            </a>
+        
+            <a class="card" href="/2025/04/13/colgem/">
+                <div class="card-info">
+                    <h3>舌尖上的模板：萬惡之源寶石</h3>
+                    <p>
+                        &#xec92;
+                        <span>&ensp;2025 / 04 / 13</span>
+                        
+                            
+                                &ensp;&ensp;&#xe8ec;
+                                <span>&ensp;测试</span> 
+                            
+                        
+                    </p>
+                    
+                        <p>『 Maxie★生草亡靈~♫沙雕上人♫ 』</p>
+                    
+                </div>
+            </a>
+        
+            <a class="card" href="/2024/06/26/lenis_test/">
+                <div class="card-info">
+                    <h3>《实梦笔记》</h3>
+                    <p>
+                        &#xec92;
+                        <span>&ensp;2024 / 06 / 26</span>
+                        
+                            
+                                &ensp;&ensp;&#xe8ec;
+                                <span>&ensp;测试</span> 
+                            
+                        
+                    </p>
+                    
+                        <p>『 一只因抑郁而迫切想自杀的老鼠 』</p>
+                    
+                </div>
+            </a>
+        
     
 </section>
 
-    <nav class="page-nav">
-    <span class="page-number current">1</span>
-    </nav>
-
-            </main>
-            <footer>
-                <span>&copy;2023 - 2025 | Created by @Raneliner</span>
-                <span>Powered by<a target="_blank" rel="noopener" href="https://hexo.io">Hexo.</a> (Testing)</span>
-            </footer>
-        </div>
+        </main>
+        <footer>
+            <span>&copy;2023 - 2025 | Created by @Raneliner</span>
+            <span>Powered by<a target="_blank" rel="noopener" href="https://hexo.io">Hexo.</a> (Testing)</span>
+        </footer>
     </body>
-    <script src="/js/script.js"></script>
+    <script src="/js/lenis.min.js"></script>
+<script src="/js/script.js"></script>
+
+
+
 </html>
