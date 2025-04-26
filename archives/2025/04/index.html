@@ -17,11 +17,14 @@
             <span>喝口茶，静静等待一下...</span>
         </div>
         <header>
-            <nav id="navbar">
+            
+<nav id="navbar">
     <div class="link">
-        <img src="/imgs/nav.jpg">
+        <div class="logo">
+            <span>ARCHIVES</span>
+        </div>
         
-            <a href="menu:();"
+            <a href="javascript:void(0);"
                 name="menu"
                 onclick=showNav();>
                 <span>&#xe700;</span>&ensp;MENU
@@ -67,7 +70,7 @@
 <nav id="mobile-navbar" class="hidden">
     <div class="link">
         
-            <a href="menu:();"
+            <a href="javascript:void(0);"
                 name="menu"
                 onclick=showNav();>
                 <span>&#xe700;</span>&ensp;MENU
@@ -108,51 +111,83 @@
 
         </header>
         <main id="main">
-            <section class="card-container">
+            <div class="search-bar">
+    <input type="text" id="searchInput" placeholder="&#xe1a3;&ensp;Take a search">
+</div>
+
+<script>
+    document.getElementById('searchInput').onkeyup = () => {
+        const input = document.getElementById('searchInput');
+        const filter = input.value.toLowerCase();
+        const cards = document.querySelectorAll('.card');
+
+        cards.forEach(card => {
+            const title = card.querySelector('p').textContent.toLowerCase();
+            if (title.includes(filter)) {
+                card.style.display = '';
+            } else {
+                card.style.display = 'none';
+            }
+        });
+    }
+</script>
+<section class="card-container">
     
-    <a class="card" href="/2025/04/13/hello_world/">
-        <div class="card-info">
-            <h3>Hello World</h3>
-            <p>
-                &#xec92;
-                <span>&ensp;2025 / 04 / 13</span>
-                
-                    
+        
+            <div class="card">
+                <a class="card-main" style="background-image: url('/imgs/bgs/school.png');" href="/2025/04/25/school/">
+                    <p>某现代高中日常</p>
+                </a>
+                <div class="card-info">
+                    <p>
+                        &#xec92;<span>&ensp;2025 / 04 / 25</span>
                         &ensp;&ensp;&#xe8ec;
-                        <span>&ensp;hello</span> 
+                        
+                            
+                                <a href="/tags/%E5%AD%A6%E6%A0%A1/">
+                                    <span>&ensp;学校</span> 
+                                </a>
+                            
+                                <a href="/tags/%E6%97%A5%E5%B8%B8/">
+                                    <span>&ensp;日常</span> 
+                                </a>
+                            
+                        
+                    </p>
                     
-                
-            </p>
-            
-                <p>『 hexo test 』</p>
-            
-        </div>
-    </a>
-
-    <a class="card" href="/2025/04/13/colgem/">
-        <div class="card-info">
-            <h3>舌尖上的模板：萬惡之源寶石</h3>
-            <p>
-                &#xec92;
-                <span>&ensp;2025 / 04 / 13</span>
-                
+                        <p>『 在校生活＆感悟以及：大热狗。 』</p>
                     
+                </div>
+            </div>
+        
+            <div class="card">
+                <a class="card-main" style="background-image: url('https://comicfury.com/useravatars/69397');" href="/2025/04/23/nami/">
+                    <p>Nami&#39;s Project House</p>
+                </a>
+                <div class="card-info">
+                    <p>
+                        &#xec92;<span>&ensp;2025 / 04 / 23</span>
                         &ensp;&ensp;&#xe8ec;
-                        <span>&ensp;测试</span> 
+                        
+                            
+                                <a href="/tags/%E9%BB%98%E8%AE%A4%E5%BD%92%E7%B1%BB/">
+                                    <span>&ensp;默认归类</span> 
+                                </a>
+                            
+                                <a href="/tags/3N/">
+                                    <span>&ensp;3N</span> 
+                                </a>
+                            
+                        
+                    </p>
                     
-                
-            </p>
-            
-                <p>『 Maxie★生草亡靈~♫沙雕上人♫ 』</p>
-            
-        </div>
-    </a>
-
+                        <p>『 NamiのProject项目小屋 』</p>
+                    
+                </div>
+            </div>
+        
+    
 </section>
-
-    <nav class="page-nav">
-    <span class="page-number current">1</span>
-    </nav>
 
         </main>
         <footer>
@@ -162,5 +197,7 @@
     </body>
     <script src="/js/lenis.min.js"></script>
 <script src="/js/script.js"></script>
+
+
 
 </html>

@@ -17,11 +17,14 @@
             <span>喝口茶，静静等待一下...</span>
         </div>
         <header>
-            <nav id="navbar">
+            
+<nav id="navbar">
     <div class="link">
-        <img src="/imgs/nav.jpg">
+        <div class="logo">
+            <span>TAGS</span>
+        </div>
         
-            <a href="menu:();"
+            <a href="javascript:void(0);"
                 name="menu"
                 onclick=showNav();>
                 <span>&#xe700;</span>&ensp;MENU
@@ -67,7 +70,7 @@
 <nav id="mobile-navbar" class="hidden">
     <div class="link">
         
-            <a href="menu:();"
+            <a href="javascript:void(0);"
                 name="menu"
                 onclick=showNav();>
                 <span>&#xe700;</span>&ensp;MENU
@@ -108,14 +111,31 @@
 
         </header>
         <main id="main">
-            <section class="tag-buttons">
+            <h2>Selected:&ensp;<i>测试</i></h2>
+<section class="tag-buttons">
     
         <a class="tag-button" href="/tags/%E6%B5%8B%E8%AF%95/">
             测试
         </a>
     
-        <a class="tag-button" href="/tags/hello/">
-            hello
+        <a class="tag-button" href="/tags/%E9%BB%98%E8%AE%A4%E5%BD%92%E7%B1%BB/">
+            默认归类
+        </a>
+    
+        <a class="tag-button" href="/tags/Hexo/">
+            Hexo
+        </a>
+    
+        <a class="tag-button" href="/tags/3N/">
+            3N
+        </a>
+    
+        <a class="tag-button" href="/tags/%E5%AD%A6%E6%A0%A1/">
+            学校
+        </a>
+    
+        <a class="tag-button" href="/tags/%E6%97%A5%E5%B8%B8/">
+            日常
         </a>
     
 </section>
@@ -123,15 +143,16 @@
 <style>
     .tag-buttons {
         display: flex;
+        justify-content: center;
         flex-wrap: wrap;
         gap: 10px;
-        margin-bottom: 20px;
+        margin-top: 20px;
     }
 
     .tag-button {
         padding: 8px 12px;
-        border: 1px solid #ccc;
-        border-radius: 4px;
+        background-color: #f5f5dc;
+        border: 1px solid #d7d2b4;
         text-decoration: none;
         color: #333;
         background-color: #f9f9f9;
@@ -142,54 +163,59 @@
         background-color: #007acc;
         color: #fff;
     }
-
-    .tag-button:active {
-        background-color: #005f99;
-        color: #fff;
-    }
 </style>
 
 <section class="card-container">
     
         
-    <a class="card" href="/2025/04/13/colgem/">
-        <div class="card-info">
-            <h3>舌尖上的模板：萬惡之源寶石</h3>
-            <p>
-                &#xec92;
-                <span>&ensp;2025 / 04 / 13</span>
-                
-                    
+            <div class="card">
+                <a class="card-main" style="background-image: url('/imgs/bgs/classroom.jpg');" href="/2024/06/26/lenis_test/">
+                    <p>《实梦笔记》</p>
+                </a>
+                <div class="card-info">
+                    <p>
+                        &#xec92;<span>&ensp;2024 / 06 / 26</span>
                         &ensp;&ensp;&#xe8ec;
-                        <span>&ensp;测试</span> 
+                        
+                            
+                                <a href="/tags/%E6%B5%8B%E8%AF%95/">
+                                    <span>&ensp;测试</span> 
+                                </a>
+                            
+                        
+                    </p>
                     
-                
-            </p>
-            
-                <p>『 Maxie★生草亡靈~♫沙雕上人♫ 』</p>
-            
-        </div>
-    </a>
-
-    <a class="card" href="/2024/06/26/lenis_test/">
-        <div class="card-info">
-            <h3>《实梦笔记》</h3>
-            <p>
-                &#xec92;
-                <span>&ensp;2024 / 06 / 26</span>
-                
+                        <p>『 Author: 一只因抑郁而迫切想自杀的老鼠 』</p>
                     
+                </div>
+            </div>
+        
+            <div class="card">
+                <a class="card-main" style="background-image: url('/imgs/bgs/colgem.jpg');" href="/2023/09/24/colgem/">
+                    <p>舌尖上的模板：萬惡之源寶石</p>
+                </a>
+                <div class="card-info">
+                    <p>
+                        &#xec92;<span>&ensp;2023 / 09 / 24</span>
                         &ensp;&ensp;&#xe8ec;
-                        <span>&ensp;测试</span> 
+                        
+                            
+                                <a href="/tags/%E6%B5%8B%E8%AF%95/">
+                                    <span>&ensp;测试</span> 
+                                </a>
+                            
+                                <a href="/tags/%E9%BB%98%E8%AE%A4%E5%BD%92%E7%B1%BB/">
+                                    <span>&ensp;默认归类</span> 
+                                </a>
+                            
+                        
+                    </p>
                     
-                
-            </p>
-            
-                <p>『 一只因抑郁而迫切想自杀的老鼠 』</p>
-            
-        </div>
-    </a>
-
+                        <p>『 Maxie★生草亡靈~♫沙雕上人♫ 』</p>
+                    
+                </div>
+            </div>
+        
     
 </section>
         </main>
@@ -200,5 +226,7 @@
     </body>
     <script src="/js/lenis.min.js"></script>
 <script src="/js/script.js"></script>
+
+
 
 </html>
