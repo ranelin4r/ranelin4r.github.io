@@ -48,7 +48,7 @@ class Swing {
         this.container.style.height = this.height + 'px';
         this.container.style.width = this.width + 'px';
 
-        this.image = new Image(197, 300);
+        this.image = new Image(197);
         this.image.src = character;
 
         this.outline = document.createElement('div');
