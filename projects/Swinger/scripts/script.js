@@ -6,7 +6,6 @@ const EVENT_TYPE = {
     touchstart: TOUCH_EVENT,
     touchmove: TOUCH_EVENT,
     touchend: TOUCH_EVENT,
-  
     mousedown: MOUSE_EVENT,
     mousemove: MOUSE_EVENT,
     mouseup: MOUSE_EVENT,
@@ -23,13 +22,13 @@ const rotatePoint = (cx, cy, x, y, angle) => {
 };
 
 class Swing {
-    constructor(container, character) {
+    constructor(container) {
         this.count = 0;
         this.v = { r: 12, y: 2, t: 0, w: 0, d: 0.988 };
         this.inertia = 0.08;
         this.sticky = 0.1;
-        this.maxR = 60;
-        this.maxY = 110;
+        this.maxR = 80;
+        this.maxY = 200;
         this.last = null;
         this.rotate = 0;
         this.initiated = false;
@@ -49,7 +48,7 @@ class Swing {
         this.container.style.width = this.width + 'px';
 
         this.image = new Image(197);
-        this.image.src = character;
+        this.image.id = 'chr';
 
         this.outline = document.createElement('div');
         this.outline.style.position = 'absolute';
@@ -203,7 +202,7 @@ class Swing {
         let { r, y, t, w, d } = this.v;
 
         w = w - r * 2 - this.rotate;
-        r = r + w * i * 1.2;
+        r = r + w * i * 1.5;
         this.v.w = w * d;
         this.v.r = r;
 
