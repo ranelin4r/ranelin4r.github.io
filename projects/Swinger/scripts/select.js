@@ -1,11 +1,11 @@
 const characters = [
     //Lonely Wolf Treat
-    { name: 'Treat', img: 'assets/treat.png', bgc: '#d4dfed', bgm: 'audios/dreaming_treat.ogg' },
-    { name: 'Mochi', img: 'assets/mochi.png', bgc: '#d86793', bgm: 'audios/mochi.ogg' },
-    { name: 'Moxie', img: 'assets/moxie.png', bgc: '#cbf8ff', bgm: 'audios/moxie.ogg' },
+    { name: 'Treat', img: 'assets/treat.png', bgc: '#d4dfed', bgm: 'audios/lwt_dreaming_treat.ogg' },
+    { name: 'Mochi', img: 'assets/mochi.png', bgc: '#d86793', bgm: 'audios/lwt_mochi.ogg' },
+    { name: 'Moxie', img: 'assets/moxie.png', bgc: '#cbf8ff', bgm: 'audios/lwt_moxie.ogg' },
 
     // OneShot
-    { name: 'Niko', img: 'assets/niko.png', bgc: '#11000e', bgm: 'audios/oneshot.ogg' },
+    { name: 'Niko', img: 'assets/niko.png', bgc: '#11000e', bgm: 'audios/os_encounter.ogg' },
 ];
 
 const groups = [
@@ -36,18 +36,18 @@ const selectnow = document.querySelector('select[name="1"]');
     });
 });
 
+const chrname = document.getElementById('chrname');
+const bgm = document.getElementById('audio');
+
 function show(index) {
     const chr = characters[index];
 
     document.body.style.backgroundColor = chr.bgc;
 
-    const bgm = new Audio();
-    bgm.loop = true;
-    bgm.volume = 0.3;
     bgm.src = chr.bgm;
+    bgm.volume = 0.3;
     bgm.play();
 
-    const chrname = document.getElementById('chrname');
     chrname.textContent = `You Chosed ${chr.name}!`;
 
     const chrimg = document.getElementById('chr');
@@ -56,7 +56,9 @@ function show(index) {
         chrimg.style.opacity = 0;
         setTimeout(() => {
             chrimg.src = src;
-            chrimg.style.opacity = 1;
+            chrimg.onload = () => {
+                chrimg.style.opacity = 1;                
+            }
         }, 200);
     }
     changeImage(chr.img);
