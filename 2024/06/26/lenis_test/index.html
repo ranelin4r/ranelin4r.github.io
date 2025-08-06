@@ -1,26 +1,27 @@
-
 <!DOCTYPE html>
 <html lang="zh-CN">
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+        <meta name="viewport" content="width=device-width,initial-scale=0.8,maximum-scale=0.8,user-scalable=0">
         <meta name="generator" content="Hexo">
         <link rel="icon" href="/imgs/favicon.png">
         <link rel="stylesheet" href="/css/main.css">
-        <link rel="stylesheet" href="/css/extra.css">
-        <title>《实梦笔记》 | Raneliner&#39;s</title>
+<link rel="stylesheet" href="/css/extra.css">
+
+    <link rel="stylesheet" href="/css/waline.min.css">
+
+
+        <title>《实梦笔记》 | RaneLiner</title>
     </head>
     <body>
         <div id="load" class="center">
-            <img src="/imgs/wait.jpg" alt="wait">
             <img src="/imgs/throbber.svg" alt="">
-            <span>喝口茶，静静等待一下...</span>
         </div>
         <header>
             
 <nav id="navbar">
     <div class="link">
-        <div class="logo">
+        <div class="logo" id="logo">
             <span>POST</span>
         </div>
         
@@ -67,7 +68,7 @@
     </button>
 </nav>
 
-<nav id="mobile-navbar" class="hidden">
+<nav id="mobile-navbar">
     <div class="link">
         
             <a href="javascript:void(0);"
@@ -113,29 +114,35 @@
         <main id="main">
             <article class="post">
     <div class="post-meta">
-        <h1 class="title">《实梦笔记》</h1>
-        <p class="post-info">
-            <span>&#xec92;</span>&ensp;
-            
-            <time datetime="2024-06-25T16:00:00.000Z">
-                2024 / 06 / 26
-            </time>    
-            
-            
-                <span>&ensp;&ensp;&#xe8ec;</span>&ensp;
+        <img class="post-bg" src="/imgs/bgs/classroom.jpg" alt="">
+        <div class="post-info">
+            <h1>《实梦笔记》</h1>
+            <p class="post-detail">
+                <span>&#xec92;</span>&ensp;
                 
-                    <a href="/tags/%E6%B5%8B%E8%AF%95/">
-                        测试
-                    </a>
+                <time datetime="2024-06-25T16:00:00.000Z">
+                    2024 / 06 / 26
+                </time>    
                 
+                
+                    <span>&ensp;&ensp;&#xe8ec;</span>&ensp;
+                    
+                        <a href="/tags/%E6%B5%8B%E8%AF%95/">
+                            测试
+                        </a>
+                    
+                
+            </p>
             
-        </p>
-        
-            <span>『 Author: 一只因抑郁而迫切想自杀的老鼠 』</span>
-        
+                <span>『 Author: 一只因抑郁而迫切想自杀的老鼠 』</span>
+                        
+        </div>
+
     </div>
     <div class="post-content">
-        <!-- toc -->
+        <div class="toc">
+
+<!-- toc -->
 
 <ul>
 <li><a href="#%E7%AC%AC%E4%B8%80%E7%AB%A0-%E6%84%8F%E5%A4%96%E9%87%8D%E7%94%9F">第一章 意外重生</a></li>
@@ -148,7 +155,7 @@
 <li><a href="#%E7%AC%AC%E5%85%AB%E7%AB%A0-%E9%87%8D%E5%9B%9E%E5%9C%B0%E7%90%83">第八章 重回地球</a></li>
 <li><a href="#%E7%AC%AC%E4%B9%9D%E7%AB%A0-%E6%8B%9C%E5%B8%88%E4%B8%8D%E6%85%8E%E5%AD%A6%E6%81%B6%E4%B9%A0">第九章 拜师不慎学恶习</a></li>
 <li><a href="#%E7%AC%AC%E5%8D%81%E7%AB%A0-%E5%88%9D%E6%AD%A5%E5%AD%A6%E4%B9%A0">第十章 初步学习</a><ul>
-<li><a href="#uios-%E4%B8%8D%E6%98%AF%E7%89%B9%E4%B9%88%E8%BF%99%E7%AB%A0%E8%8A%82%E6%98%AF%E6%B0%B4%E5%87%BA%E6%9D%A5%E7%9A%84%E4%B9%88iu"><u><i>（os: 不是特么这章节是水出来的么？？？）</i></u></a></li>
+<li><a href="#os-%E4%B8%8D%E6%98%AF%E7%89%B9%E4%B9%88%E8%BF%99%E7%AB%A0%E8%8A%82%E6%98%AF%E6%B0%B4%E5%87%BA%E6%9D%A5%E7%9A%84%E4%B9%88">（os: 不是特么这章节是水出来的么？？？）</a></li>
 </ul>
 </li>
 <li><a href="#%E7%AC%AC%E5%8D%81%E4%B8%80%E7%AB%A0-%E6%95%85%E5%9C%B0%E9%87%8D%E6%B8%B8">第十一章 故地重游</a></li>
@@ -160,6 +167,8 @@
 </li>
 </ul>
 <!-- tocstop -->
+
+</div>
 
 <h1><span id="第一章-意外重生">第一章    意外重生</span></h1><p>  我叫张山，是个被老板天天加班的员工，老板也姓张，不过他是个彻头彻尾的资本家，每天为了压榨员工，各种加班。</p>
 <p>  不知什么时候，我手机里突然多了条消息，是老板发来的，说是老板要求所有员工到会议室开会，说说最近的业绩，还要在9点半前到，但问题是现在已经是晚上的10点了，而这条消息是早上发的，我一想，立即找到不对劲的地方，因为昨天早上9点半开会了，你本人把员工工资一点都不发就算了，还不断地拖欠，这无疑让我们的生活雪上加霜，我当即找到老板，怒骂一句：“张老板，你知道吗，你拖欠员工多长时间的工资了吗，3年了，连一个月的工资都没发下去，我只是单纯的以为是公司周金转不过来，拖欠了所有员工，别的不说，就门口保安小李，他的工资前前后后算起来，你已经欠他1000000了，做保洁的张姨，你欠他3000000，我是全公司之中万里无一的精英，当初你承诺月入千万，结果，欠了我8兆的人民币，加上利息200000000000.1954516521225415208541469415415263元，你如果不把工资全发出来，我们就辞职不干，而且还要赔偿我们更多的钱，还根据法律规定，索要3本重要的小本本，你看着办吧，不服，行，你等着。”老板被这股气息差点吓尿，但他还是没有要交钱的意思。</p>
@@ -286,7 +295,7 @@
 <p>  但是我是真的学到了，C++的代码我已经入门了，还有python，目前也是入门。</p>
 <br>
 
-<h3><span id="os-不是特么这章节是水出来的么"><u><i>（os: 不是特么这章节是水出来的么？？？）</i></u></span></h3><p><br><br><br><br><br></p>
+<h3><span id="os-不是特么这章节是水出来的么">（os: 不是特么这章节是水出来的么？？？）</span></h3><p><br><br><br><br><br></p>
 <hr>
 <h1><span id="第十一章-故地重游">第十一章    故地重游</span></h1><p>  我时不时来到克尔鲁索这颗星球来看看，而这次，我径直地前往副本之塔，为了之前报复克里索特，我就凭一己之力，活生生的击杀到第99层，这可把卡基娅所在的小队给吓懵逼了，因为从来没见过有人能靠单个人来进攻的，而此时卡基娅发现，自己正打到第98层，这差距大得有点离谱啊，我说道：“旧地重游时，没有旧时情欲浓，旧时物是人已非，略有短暂回味，冲击旧塔时，短暂间一战成名，而今却是新感受，重振吾之雄风。”，这首词不过是我壮大自身的誓言，但这一次，我不会再向我曾经那副令人处处压制的样子一样搞累了，我硬生生的成功杀进第100层。</p>
 <p>  而我能够释放虫洞，轻松的在地球和克尔鲁索这两颗星球之间自由穿梭，我不再像之前那样心慈手软了，因为心慈手软终究会一无所有，而最善良的人为什么到最后变得最无情？因为已经对这个世界的恶意看的够透彻了！我也套用相同的手段，但我还是正常的活下去啊，人生下来时来体验人间冷暖的，每个人连最初的梦想都彻底忘了，这叫什么，初心丢失了，有句话是这么说的：“初心易有，但很难直接完成他，而这每一步的脚印，每个人的执着，全忘了，这个世界，根本就不存在公平，因为人生无比短，但确切的来说，时间才是杀手，也是天使，他能把人送走，也能给别人带来新生，也许，那些忘了自己最初的梦想的，应该是被生活磨平了棱角了。”</p>
@@ -323,19 +332,46 @@
 <p><br><br><br><br><br></p>
 <h2><span id="to-be-continuednah-bro这不可能">To Be Continued……（Nah bro这不可能。）</span></h2>
     </div>
+        <div id="comment">
+            <div id="waline"></div>
+            <!-- Waline 评论系统 -->
+<script>
+    Waline.init({
+      el: '#waline',
+      serverURL: '', // 你的Waline服务端URL
+      path: '',
+      // 其他配置选项
+      avatar: 'mp',
+      meta: ['nick', 'mail', 'link'],
+      requiredMeta: ['nick'],
+      pageSize: 10,
+      lang: '',
+      dark: '',
+      locale: {
+        placeholder: ''
+      }
+    });
+</script>
+
+        </div>
 </article>
 
 
         </main>
         <footer>
-            <span>&copy;2023 - 2025 | Created by @Raneliner</span>
+            <span>&copy;2023 - 2025 | Created by @RaneLiner</span>
             <span>Powered by<a target="_blank" rel="noopener" href="https://hexo.io">Hexo.</a> (Testing)</span>
         </footer>
+        <a id="back2top" href="#top">
+            <span>BACK 2 TOP</span>
+        </a>
     </body>
     <script src="/js/lenis.min.js"></script>
+<script src="/js/smooth-scroll.polyfills.min.js"></script>
 <script src="/js/script.js"></script>
 
 
+    <script src="/js/waline.min.js"></script>
     <script src="/js/highlight.pack.js"></script>
     <script>hljs.initHighlightingOnLoad();</script>
     <link rel="stylesheet" href="/css/highlight/tomorrow-night-blue.css">
